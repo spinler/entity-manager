@@ -9,14 +9,30 @@
             ]
         },
         {
-            "Name": "Ambient Temp Thresholds",
+            "Name": "Ambient Temp Settings",
             "Type": "IBMAmbientTemp",
             "SensorName": "Ambient_Virtual_Temp",
-            "WarningTempOn": 42,
-            "WarningTempOff": 39,
-            "Epow3TempOn": 50,
-            "Epow3TempOff": 45,
-            "Epow4TempOn": 55
+            "PerfLoss":
+            {
+                "Temp": 35,
+                "TempReset": 32
+            },
+            "Warning":
+            {
+                "Temp": 42,
+                "TempReset": 39
+            },
+            "EPOW3":
+            {
+                "Temp": 50,
+                "TempReset": 45,
+                "Timer": 900
+            },
+            "EPOW4":
+            {
+                "Temp": 55,
+                "Timer": 20
+            }
         }
     ],
     "Name": "Rainier 2U Chassis",
