@@ -95,6 +95,76 @@
                 "Type",
                 "Names"
             ]
+        },
+        "IBMAmbientTemp": {
+            "title": "Ambient temperature EPOW values",
+            "description": [
+                "Contains the ambient temperature values to use for ",
+                "triggering EPOW alerts and power offs."
+            ],
+            "type": "object",
+            "properties": {
+                "Name": {
+                    "type": "string"
+                },
+                "Type": {
+                    "enum": [
+                        "IBMAmbientTemp"
+                    ]
+                },
+                "SensorName": {
+                    "description": [
+                        "The name of the ambient temp sensor to watch."
+                    ],
+                    "type": "string"
+                },
+                "WarningTempOn": {
+                    "description": [
+                        "The temperature at which to create an event log ",
+                        "warning of a high ambient temperature."
+                    ],
+                    "type": "double"
+                },
+                "WarningTempOff": {
+                    "description": [
+                        "The temperature, when crossed when decreasing, to ",
+                        "create an event log indicating the warning has ",
+                        "passed."
+                    ],
+                    "type": "double"
+                },
+                "Epow3TempOn": {
+                    "description": [
+                        "The temperature at which to send an EPOW3 alert ",
+                        "and start a power off countdown."
+                    ],
+                    "type": "double"
+                },
+                "Epow3TempOff": {
+                    "description": [
+                        "The temperature, when crossed when decreasing, to ",
+                        "clear the EPOW3 alert and stop the countdown."
+                    ],
+                    "type": "double"
+                },
+                "Epow4TempOn": {
+                    "description": [
+                        "The temperature at which to send an EPOW4 alert ",
+                        "and start a uncancelable power off countdown."
+                    ],
+                    "type": "double"
+                }
+            },
+            "required": [
+                "Name",
+                "Type",
+                "SensorName",
+                "WarningTempOn",
+                "WarningTempOff",
+                "Epow3TempOn",
+                "Epow3TempOff",
+                "Epow4TempOn"
+            ]
         }
     }
 }
